@@ -1,0 +1,321 @@
+/* =========================================================================
+   HIPE Agency — light theme + brand override (Anton/Montserrat, #ff0000)
+   Loaded AFTER style.css to override variables and key surfaces.
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+/* Swap dark→light by inverting the meaning of --black / --white. */
+:root {
+  --black: #ffffff;
+  --white: #0a0a0a;
+  --default: #ff0000;
+  --border-color: #e8e8e8;
+  --grey: #f4f4f4;
+  --hipe-red: #ff0000;
+  --hipe-ink: #0a0a0a;
+  --hipe-bg: #ffffff;
+  --hipe-bg-soft: #fafafa;
+  --hipe-bg-card: #f4f4f4;
+}
+
+/* Base body */
+body {
+  background-color: var(--hipe-bg) !important;
+  background-image: none !important;
+  color: var(--hipe-ink) !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+}
+
+/* Headlines use Anton */
+h1, h2, h3, h4, h5, h6,
+.hero-big-text,
+.main-title,
+.heading,
+.blog-heading,
+.mission-heading,
+.testimonial-heading,
+.number-text-big,
+.service-text,
+.about-banner-heading,
+.contact-banner-heading,
+.work-banner-heading,
+.bog-banner-heading,
+.about-section-heading,
+.singlework-banner-heading,
+.singleblog-banner-heading,
+.team-name,
+.faq-question {
+  font-family: 'Anton', sans-serif !important;
+  font-weight: 400 !important;
+  letter-spacing: 1px;
+}
+
+p, a, span, div, li, label, input, textarea, button, .menu-item, .hero-paragraph,
+.hero-under-text, .mission-paragraph, .testimonials-txt, .number-text-small,
+.work-category, .blog-category, .copyright-text, .social-text, .mail-link,
+.phone-link, .hero-projects-link-text, .all-projects {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* ---------- Header ---------- */
+.header-inner {
+  background-color: var(--hipe-bg-soft) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.menu-item {
+  color: var(--hipe-ink) !important;
+}
+.menu-item:hover { color: var(--hipe-red) !important; }
+.menu-item.w--current { color: var(--hipe-red) !important; }
+.menu-item.w--current:hover { color: var(--hipe-ink) !important; }
+
+.logo-img {
+  max-height: 48px;
+  width: auto;
+}
+
+/* Language toggle */
+.lang-switch {
+  display: inline-flex;
+  gap: 4px;
+  margin-left: 18px;
+  align-items: center;
+}
+.lang-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 6px 10px;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--hipe-ink);
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: all .2s ease;
+}
+.lang-btn:hover { border-color: var(--hipe-red); color: var(--hipe-red); }
+.lang-btn.active { background: var(--hipe-ink); color: #fff; border-color: var(--hipe-ink); }
+
+/* ---------- Hero ---------- */
+.hero-big-text { color: var(--hipe-ink) !important; }
+.hero-paragraph, .hero-under-text { color: var(--hipe-ink) !important; }
+.hero-projects-link-text { color: var(--hipe-ink) !important; }
+.hero-projects-link:hover .hero-projects-link-text { color: var(--hipe-red) !important; }
+
+.hero-partners {
+  border-top: 1px solid var(--border-color) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* Make red accent appear on one of the hero words for branding */
+.hero-right .hero-big-text { color: var(--hipe-red) !important; }
+
+/* ---------- Numbers / stats ---------- */
+.numbers-item-orange { background-color: var(--hipe-red) !important; }
+.numbers-item-orange .number-text-big,
+.numbers-item-orange .number-text-small { color: #fff !important; }
+
+.numbers-item-grey { background-color: var(--hipe-bg-card) !important; }
+.numbers-item-grey .number-text-big,
+.numbers-item-grey .number-text-small { color: var(--hipe-ink) !important; }
+
+.numbers-item-dark { background-color: var(--hipe-ink) !important; }
+.numbers-item-dark .number-text-big,
+.numbers-item-dark .number-text-small { color: #fff !important; }
+
+.numbers-item-grey-light { background-color: #efefef !important; }
+.numbers-item-grey-light .number-text-big,
+.numbers-item-grey-light .number-text-small { color: var(--hipe-ink) !important; }
+
+.number-circle-black { background-color: var(--hipe-ink) !important; }
+.circle-orange { background-color: var(--hipe-red) !important; }
+.circle-dark { background-color: var(--hipe-ink) !important; }
+.circle-grey { background-color: #c7c7c7 !important; }
+
+/* ---------- Services ---------- */
+.services-section { border-top: 1px solid var(--border-color); }
+.services-item {
+  border: 1px solid var(--border-color) !important;
+  background-color: var(--hipe-bg-soft) !important;
+}
+.services-item:hover { border-color: var(--hipe-red) !important; }
+.service-nunmber { color: var(--hipe-red) !important; }
+.service-text { color: var(--hipe-ink) !important; }
+
+/* ---------- Who we are / mission / vision ---------- */
+.mission-heading { color: var(--hipe-ink) !important; }
+.mission-paragraph { color: var(--hipe-ink) !important; }
+.mission-orange-box { background-color: var(--hipe-red) !important; }
+.mission-transparent { background-color: transparent !important; }
+.main-title { color: var(--hipe-ink) !important; }
+
+/* ---------- Work ---------- */
+.work-section .heading,
+.work-item .heading { color: var(--hipe-ink) !important; }
+.work-category { color: var(--hipe-red) !important; }
+.all-projects {
+  color: var(--hipe-ink) !important;
+  border-bottom: 1px solid var(--hipe-ink);
+}
+.all-projects:hover { color: var(--hipe-red) !important; border-color: var(--hipe-red); }
+
+/* ---------- Testimonials ---------- */
+.trstimonials-item {
+  border: 1px solid var(--border-color) !important;
+  background-color: var(--hipe-bg-soft) !important;
+}
+.testimonial-heading { color: var(--hipe-ink) !important; }
+.testimonials-txt { color: var(--hipe-ink) !important; }
+.testimonials-quote { filter: invert(1) brightness(0.2); opacity: .8; }
+
+/* ---------- Blog/Insights (kept for dynamic sliders, hidden via inline) ---------- */
+.blog-item { background-color: var(--hipe-bg-soft) !important; }
+.blog-heading { color: var(--hipe-ink) !important; }
+.blog-category { color: var(--hipe-red) !important; }
+.blog-arrow { background-color: var(--hipe-red) !important; }
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: var(--hipe-bg-soft) !important;
+  border-top: 1px solid var(--border-color);
+}
+.mail-link, .phone-link { color: var(--hipe-ink) !important; }
+.mail-link:hover, .phone-link:hover { color: var(--hipe-red) !important; }
+.social-link { border: 1px solid var(--border-color) !important; }
+.social-link:hover { border-color: var(--hipe-red) !important; }
+.social-text { color: var(--hipe-ink) !important; }
+.social-link:hover .social-text { color: var(--hipe-red) !important; }
+.copyright-text { color: #555 !important; }
+.copyright-text a { color: var(--hipe-ink) !important; }
+
+.backtotop { filter: invert(1); }
+.social-arrow { filter: invert(1); }
+.hero-proect-link-arrow { filter: invert(1); }
+
+/* ---------- Cursor ---------- */
+.cursor { background-color: var(--hipe-red) !important; }
+.project-cursor-text { color: #fff !important; }
+
+/* ---------- Banner / inner page heroes ---------- */
+.about-banner, .contact-banner, .work-banner, .blog-banner,
+.singlework-banner, .singleblog-banner {
+  background-color: var(--hipe-bg-soft) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+.about-banner-heading, .contact-banner-heading, .work-banner-heading,
+.bog-banner-heading, .singlework-banner-heading, .singleblog-banner-heading {
+  color: var(--hipe-ink) !important;
+}
+
+/* ---------- Generic dark surface fixes ---------- */
+[class*="-section"] { background-color: var(--hipe-bg) !important; }
+.work-section, .who-we-are-section, .services-section,
+.numbers-section, .testimonials-section, .blog-section,
+.hero-section, .mission-section, .pricing-section { background-color: var(--hipe-bg) !important; }
+
+.heading,
+h1, h2, h3, h4, h5, h6 { color: var(--hipe-ink) !important; }
+
+/* Override any inline dark border-color/background rgb values that come from the template */
+[style*="border-color: rgb(41, 41, 41)"],
+[style*="border-color: rgb(25, 25, 25)"] { border-color: var(--border-color) !important; }
+[style*="background-color: rgb(51, 51, 51)"],
+[style*="background-color: rgb(25, 25, 25)"] { background-color: var(--hipe-red) !important; }
+
+/* Forms (contact) */
+input, textarea, select {
+  background-color: var(--hipe-bg-soft) !important;
+  color: var(--hipe-ink) !important;
+  border: 1px solid var(--border-color) !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+input:focus, textarea:focus { border-color: var(--hipe-red) !important; outline: none !important; }
+
+/* ============================================================
+   Pricing CTA — "Request a budget" replacing detailed pricing
+   ============================================================ */
+.pricing-section { padding: 100px 0; }
+.pricing-cta {
+  border: 1px solid var(--border-color);
+  background-color: var(--hipe-bg-soft);
+  padding: 80px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.pricing-cta::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background-color: var(--hipe-red);
+  border-radius: 50%;
+  opacity: 0.08;
+}
+.pricing-cta-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--hipe-red);
+  margin-bottom: 18px;
+}
+.pricing-cta-title {
+  font-family: 'Anton', sans-serif !important;
+  font-size: clamp(40px, 6vw, 80px);
+  line-height: 1;
+  margin: 0 0 24px;
+  color: var(--hipe-ink);
+  letter-spacing: 1px;
+}
+.pricing-cta-title .accent { color: var(--hipe-red); }
+.pricing-cta-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 640px;
+  margin: 0 auto 36px;
+  color: #444;
+}
+.pricing-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--hipe-ink);
+  color: #fff;
+  padding: 20px 36px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color .25s ease, transform .25s ease;
+}
+.pricing-cta-button:hover { background-color: var(--hipe-red); transform: translateY(-2px); }
+.pricing-cta-button .arrow { font-size: 18px; }
+
+@media (max-width: 768px) {
+  .pricing-cta { padding: 50px 24px; }
+}
+
+/* Hide blog/insights-only pieces if a section is opted out via class */
+.hipe-hidden { display: none !important; }
+
+/* Testimonial role / company line under each testimonial */
+.testimonial-role {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--hipe-red);
+  margin-top: 10px;
+}
