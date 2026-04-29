@@ -1989,6 +1989,7 @@ blockquote {
 .stemap-text {
   border: 1px solid var(--border-color);
   background-color: #000000b3;
+  color: var(--white);
   border-radius: 5px;
   margin-left: 20px;
   padding: 10px;
@@ -2924,7 +2925,7 @@ blockquote {
 
   .main-menu {
     border: 1px solid var(--white);
-    background-color: #000;
+    background-color: #ffffff;
     border-radius: 0;
     padding: 20px;
   }

@@ -319,3 +319,151 @@ input:focus, textarea:focus { border-color: var(--hipe-red) !important; outline:
   color: var(--hipe-red);
   margin-top: 10px;
 }
+
+/* =========================================================================
+   RED DOMINANT MODE — colors only, no layout changes
+   Same structure, paddings, sizes and borders as before. Only swap surfaces.
+   To revert: delete everything below this line.
+   ========================================================================= */
+
+body { background-color: #ff0000 !important; color: #0a0a0a !important; }
+
+/* HEADER — white bar, original (black) logo, black menu */
+.header { background-color: #ff0000 !important; }
+.header-inner { background-color: #ffffff !important; border-color: #e8e8e8 !important; }
+.header .logo-img { filter: none !important; }
+.header .menu-item { color: #0a0a0a !important; }
+.header .menu-item:hover { color: #ff0000 !important; }
+.header .menu-item.w--current { color: #ff0000 !important; }
+.lang-btn { background: transparent !important; color: #0a0a0a !important; border-color: #0a0a0a !important; }
+.lang-btn:hover { background: #ff0000 !important; color: #ffffff !important; border-color: #ff0000 !important; }
+.lang-btn.active { background: #0a0a0a !important; color: #ffffff !important; border-color: #0a0a0a !important; }
+
+/* SITEMAP banner — red */
+.sitemap { background-color: #ff0000 !important; }
+.sitemap-heading { color: #0a0a0a !important; }
+.stemap-text { color: #ffffff !important; }
+
+/* HERO — full red */
+.hero-section { background-color: #ff0000 !important; }
+.hero-big-text { color: #0a0a0a !important; }
+.hero-right .hero-big-text { color: #ffffff !important; }
+.hero-paragraph { color: #0a0a0a !important; }
+.hero-under-text { color: #0a0a0a !important; }
+.hero-projects-link-text { color: #0a0a0a !important; }
+.hero-projects-link:hover .hero-projects-link-text { color: #ffffff !important; }
+.hero-partners { background-color: #0a0a0a !important; }
+.hero-client-logo { filter: invert(1) brightness(1.5); }
+
+/* NUMBERS — alternating black / white blocks on red backdrop */
+.numbers-section { background-color: #ff0000 !important; }
+.numbers-item-orange { background-color: #0a0a0a !important; }
+.numbers-item-orange .number-text-big,
+.numbers-item-orange .number-text-small { color: #ffffff !important; }
+.numbers-item-orange .number-circle-black { background-color: #ff0000 !important; }
+
+.numbers-item-grey { background-color: #ffffff !important; }
+.numbers-item-grey .number-text-big,
+.numbers-item-grey .number-text-small { color: #0a0a0a !important; }
+.numbers-item-grey .circle-dark { background-color: #ff0000 !important; }
+
+.numbers-item-dark { background-color: #ffffff !important; }
+.numbers-item-dark .number-text-big { color: #ff0000 !important; }
+.numbers-item-dark .number-text-small { color: #0a0a0a !important; }
+.numbers-item-dark .circle-orange { background-color: #0a0a0a !important; }
+
+.numbers-item-grey-light { background-color: #0a0a0a !important; }
+.numbers-item-grey-light .number-text-big,
+.numbers-item-grey-light .number-text-small { color: #ffffff !important; }
+.numbers-item-grey-light .circle-grey { background-color: #ff0000 !important; }
+
+/* SERVICES — white breather */
+.services-section { background-color: #ffffff !important; }
+.services-section .main-title { color: #0a0a0a !important; }
+.services-item { background-color: #fafafa !important; border-color: #0a0a0a !important; }
+.services-item:hover { background-color: #ff0000 !important; border-color: #ff0000 !important; }
+.services-item:hover .service-text,
+.services-item:hover .service-nunmber { color: #ffffff !important; }
+.service-nunmber { color: #ff0000 !important; }
+.service-text { color: #0a0a0a !important; }
+
+/* WHO WE ARE / Mission-Vision — red */
+.who-we-are-section { background-color: #ff0000 !important; }
+.who-we-are-section .main-title { color: #0a0a0a !important; }
+.mission-heading { color: #0a0a0a !important; }
+.mission-paragraph { color: #0a0a0a !important; }
+.mission-orange-box { background-color: #0a0a0a !important; }
+
+/* WORK — white breather */
+.work-section { background-color: #ffffff !important; }
+.work-section .main-title { color: #0a0a0a !important; }
+.work-item .heading { color: #0a0a0a !important; }
+.work-item .work-category { color: #ff0000 !important; }
+.all-projects { color: #0a0a0a !important; border-color: #0a0a0a !important; }
+.all-projects:hover { color: #ff0000 !important; border-color: #ff0000 !important; }
+
+/* TESTIMONIALS — red */
+.testimonials-section { background-color: #ff0000 !important; }
+.testimonials-section .main-title { color: #0a0a0a !important; }
+.trstimonials-item { background-color: #ffffff !important; border-color: #0a0a0a !important; }
+.testimonial-heading { color: #0a0a0a !important; }
+.testimonials-txt { color: #0a0a0a !important; }
+.testimonial-role { color: #ff0000 !important; }
+
+/* CLIENTS section (about) — black band */
+.clients-section { background-color: #0a0a0a !important; }
+.clients-section .main-title { color: #ffffff !important; }
+.clients-section .hero-client-logo { filter: invert(1) brightness(1.5); }
+
+/* PRICING CTA — black card on red bg */
+.pricing-section { background-color: #ff0000 !important; }
+.pricing-cta { background-color: #0a0a0a !important; border-color: #0a0a0a !important; }
+.pricing-cta::before { background-color: #ff0000 !important; opacity: 0.6 !important; }
+.pricing-cta-eyebrow { color: #ff0000 !important; }
+.pricing-cta-title { color: #ffffff !important; }
+.pricing-cta-title .accent { color: #ff0000 !important; }
+.pricing-cta-text { color: #cccccc !important; }
+.pricing-cta-button { background-color: #ff0000 !important; color: #ffffff !important; }
+.pricing-cta-button:hover { background-color: #ffffff !important; color: #0a0a0a !important; }
+
+/* SINGLE WORK — white */
+.sigle-work-section { background-color: #ffffff !important; }
+.single-main-title-heading { color: #0a0a0a !important; }
+.single-detail-heading { color: #ff0000 !important; }
+.single-details-text { color: #0a0a0a !important; }
+.button.w-button { background-color: #ff0000 !important; color: #ffffff !important; }
+.button.w-button:hover { background-color: #0a0a0a !important; }
+
+/* CONTACT — red with white form */
+.contact-section { background-color: #ff0000 !important; }
+.contact-text, .contact-location { color: #0a0a0a !important; }
+.contact-link { color: #0a0a0a !important; }
+.contact-link:hover { color: #ffffff !important; }
+.comtact-main-title { color: #0a0a0a !important; }
+.contact-title-with-border { border-color: #0a0a0a !important; }
+
+input, textarea, select { background-color: #ffffff !important; color: #0a0a0a !important; border-color: #0a0a0a !important; }
+input:focus, textarea:focus { border-color: #ffffff !important; }
+input::placeholder, textarea::placeholder { color: #666 !important; }
+
+.submit-button { background-color: #0a0a0a !important; color: #ffffff !important; }
+.submit-button:hover { background-color: #ffffff !important; color: #0a0a0a !important; }
+
+.social-text-2 { color: #0a0a0a !important; }
+.social-item:hover .social-text-2 { color: #ffffff !important; }
+
+/* FOOTER — black */
+.footer { background-color: #0a0a0a !important; }
+.mail-link, .phone-link { color: #ffffff !important; }
+.mail-link:hover, .phone-link:hover { color: #ff0000 !important; }
+.social-link { border-color: #ffffff !important; background-color: transparent !important; }
+.social-link:hover { border-color: #ff0000 !important; background-color: #ff0000 !important; }
+.social-text { color: #ffffff !important; }
+.social-arrow { filter: invert(1) !important; }
+.copyright-text { color: #999 !important; }
+.copyright-text a, .copyright-text span { color: #ffffff !important; }
+.backtotop img { filter: invert(1); }
+
+/* Cursor — black with white border so it's visible on red AND white */
+.cursor { background-color: #0a0a0a !important; }
+.project-cursor-text { color: #ffffff !important; }
