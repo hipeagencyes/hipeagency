@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "HIPE — High Performance Agency",
+  "short_name": "HIPE",
+  "description": "Branding, comunicación y digital. Brands made to perform.",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "theme_color": "#f7f6f2",
+  "background_color": "#f7f6f2",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

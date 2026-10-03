@@ -27,7 +27,9 @@
 
     var buttons = document.querySelectorAll('.lang-btn');
     for (var k = 0; k < buttons.length; k++) {
-      buttons[k].classList.toggle('active', buttons[k].getAttribute('data-lang') === lang);
+      var isActive = buttons[k].getAttribute('data-lang') === lang;
+      buttons[k].classList.toggle('active', isActive);
+      buttons[k].setAttribute('aria-pressed', String(isActive));
     }
   }
 

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /scripts/
+Disallow: /assets/brand/originals/
+
+Sitemap: https://www.hipeagency.es/sitemap.xml
