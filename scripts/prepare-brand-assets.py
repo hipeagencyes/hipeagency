@@ -15,16 +15,15 @@ def trimmed(image):
     return image.crop(bbox) if bbox else image
 
 names = {
-    'HIPE_BLACK': 'hipe-black', 'HIPE_BLACK_MONO': 'hipe-black-mono',
-    'HIPE_WHITE': 'hipe-white', 'HIPE_WHITE_MONO': 'hipe-white-mono',
-    'ICON_IG_BLACK': 'symbol-black', 'ICON_IG_RED': 'symbol-red',
-    'ICON_IG_WHITE': 'symbol-white',
+    'HIPE_BLACK': 'hipe-black',
+    'ICON_IG_RED': 'symbol-red',
 }
 for original, name in names.items():
     image = trimmed(Image.open(BRAND / 'originals' / (original + '.png')).convert('RGBA'))
     image.thumbnail((1200, 1200), Image.Resampling.LANCZOS)
     image.save(BRAND / (name + '.png'), optimize=True)
-    image.save(BRAND / (name + '.webp'), lossless=True, method=6)
+    if name == 'hipe-black':
+        image.save(BRAND / (name + '.webp'), lossless=True, method=6)
 
 symbol = trimmed(Image.open(BRAND / 'originals/ICON_IG_RED.png').convert('RGBA'))
 def icon(size, opaque=False):
@@ -35,9 +34,9 @@ def icon(size, opaque=False):
     canvas.alpha_composite(image, ((size-image.width)//2, (size-image.height)//2))
     return canvas
 
-for size in (16, 32, 48):
+for size in (16, 32):
     icon(size).save(ICONS / f'favicon-{size}.png', optimize=True)
 icon(256).save(ROOT / 'favicon.ico', sizes=[(16,16), (32,32), (48,48), (64,64), (128,128), (256,256)])
 for size, name in ((180, 'apple-touch-icon'), (192, 'icon-192'), (512, 'icon-512')):
     icon(size, opaque=True).save(ICONS / (name + '.png'), optimize=True)
-print('Brand variants and favicon sizes generated.')
+print('Website brand assets and favicon sizes generated.')

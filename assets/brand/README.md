@@ -1,14 +1,12 @@
 # HIPE brand assets
 
-`originals/` preserves the seven supplied PNGs. Web variants trim transparent margins and keep the original artwork and colours; no logos have been redrawn.
+`originals/` preserves the two supplied PNGs used by the website and asset generation scripts. Web variants trim transparent margins and keep the original artwork and colours; no logos have been redrawn.
 
 - `hipe-black.webp`: current website header on light backgrounds.
 - `hipe-black.png`: social cards and Organization structured data.
-- `hipe-white.*`: colour logo for dark backgrounds.
-- `hipe-black-mono.*`, `hipe-white-mono.*`: monochrome applications.
-- `symbol-red.*`, `symbol-black.*`, `symbol-white.*`: supplied symbol variants.
+- `symbol-red.png`: symbol used by the social card generator.
 
-`../icons/` contains favicons at 16, 32 and 48 pixels, the 180-pixel Apple touch icon, and 192/512-pixel manifest icons. The multi-resolution ICO is `/favicon.ico`.
+`../icons/` contains favicons at 16 and 32 pixels, the 180-pixel Apple touch icon, and 192/512-pixel manifest icons. The multi-resolution ICO is `/favicon.ico`.
 
 `../social/` contains page-specific JPG share cards at 1200 × 630 pixels.
 
